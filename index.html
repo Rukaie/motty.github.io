@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochizuki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js">
+    <script>
+        (function (d) {
+            var config = {
+                    kitId: 'sqb5klf',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <canvas class="background"></canvas>
+        <div class="heading">
+            <h2 class="heading06" data-en="Motty">自己紹介</h2>
+        </div>
+        <div class="main-wrapper">
+            <div class="oneblock">
+                <div class="row">
+                    <div class="column">
+                        <div class="image"><img src="img/self.jpg"></div>
+                    </div>
+                    <div class="column-text">
+                        <table>
+                            <tr>
+                                <td class="table-left">学部</td><td>総合数理学部先端メディアサイエンス学科</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">氏名</td><td>望月 崇広</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">血液型</td><td>A型</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="oneblock">
+                <div class="row">
+                    <div class="column-text">
+                        <table>
+                            <tr>
+                                <td class="table-left">出身地</td><td>東京都清瀬市</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">出身高校</td><td>暁星高校</td>
+                            </tr>
+                            <tr>
+                                <td class="table-left">誕生日</td><td>4月25日</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <div class="image"><img src="img/highschool.jpg" class="scrollanime"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="oneblock">
+                <div class="row">
+                    <div class="column">
+                        <div class="image"><img src="img/f1v2.jpg" class="scrollanime"></div>
+                    </div>
+                    <div class="column-text">
+                        スポーツ全般好きです！<br>写真はF1ですが、サッカー、MLBなどスポーツ全般好きです！
+                    </div>
+                </div>
+            </div>
+
+            <div class="oneblock">
+                <div class="row">
+                    <div class="column-text">
+                        趣味でCG作品を作っています。
+                    </div>
+                    <div class="column">
+                        <div class="image"><img src="img/cathedral.png" class="scrollanime"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="oneblock">
+                <div class="row">
+                    <div class="column">
+                        <div class="image"><img src="img/mountain.jpg" class="scrollanime"></div>
+                    </div>
+                    <div class="column-text">
+                        高校時代は山岳部に所属していました。<br>最近山に行けていなくて少し寂しいです…。
+                    </div>
+                </div>
+            </div>
+
+            <div class="oneblock">
+                <div class="row">
+                    <div class="column-text">
+                        もう一つの趣味に写真があります。<br>
+                        @motti_mottyにその他作品を載せています。
+                    </div>
+                    <div class="column">
+                        <div class="image"><img src="img/myphotp.jpg" class="scrollanime"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="last-text">もう少ししたらみんなに会えるかな！みんなよろしく！！</div>
+        </div>
+    </main>
+
+
+    <script src="js/particles.min.js"></script>
+    <script>
+        window.onload = function () {
+            Particles.init({
+                selector: '.background'
+            });
+            Particles.init({
+                color: '#ffffff'
+            });
+            Particles.init({
+                connectParticles: 'true'
+            });
+            Particles.init({
+                speed: '0.1'
+            });
+            Particles.init({
+                maxParticles: '100'
+            });
+        };
+    </script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                var wHeight = $(window).height();
+                var scrollAmount = $(window).scrollTop();
+                $('.scrollanime').each(function () {
+                    var targetPosition = $(this).offset().top;
+                    if (scrollAmount > targetPosition - wHeight + 100) {
+                        $(this).addClass("fadeInDown");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
