@@ -1,0 +1,157 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  font-family: kozuka-gothic-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.background {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgb(39, 46, 71);
+}
+
+.main-wrapper {
+  z-index: 2;
+  color: black;
+}
+
+.oneblock {
+  width: 1050px;
+  margin: 150px auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 500px;
+}
+
+.column-text {
+  width: 450px;
+  justify-content: space-between;
+  /* margin: 25px; */
+  background-color: rgba(240, 248, 255, 0.7);
+  border-radius: 25px;
+  padding: 25px 30px;
+  /* font-size: 25px; */
+  height: 150px;
+  margin: auto 0;
+  letter-spacing: 0.05em;
+  line-height: 1.5em;
+}
+
+img {
+  width: 500px;
+}
+
+.heading06 {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 35px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.heading06 span {
+  position: relative;
+  z-index: 2;
+}
+
+.heading06::before {
+  content: attr(data-en);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(66, 224, 211, 0.411);
+  font-size: 80px;
+  font-style: italic;
+}
+
+.heading06::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%) rotate(30deg);
+  width: 1px;
+  height: 40px;
+  background-color: rgba(66, 224, 211, 1);
+}
+
+.image {
+  position: relative;
+}
+
+.image::before,
+.image::after {
+  content: '';
+  position: absolute;
+  transform: rotate(-35deg);
+  width: 70px;
+  height: 25px;
+  background-color: rgb(39, 46, 71);
+  z-index: 1;
+}
+
+.image::before {
+  top: -10px;
+  left: -25px;
+  border-bottom: 1px solid #aaa;
+}
+
+.image::after {
+  bottom: -10px;
+  right: -25px;
+  border-top: 1px solid #aaa;
+}
+
+.last-text{
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  padding:25px 30px;
+  border-radius: 25px;
+  background-color: rgba(240, 248, 255, 0.7);
+}
+
+table tr td{
+  padding: 0.5em 1em;
+}
+
+.table-left{
+  text-align: center;
+}
+
+.scrollanime {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
