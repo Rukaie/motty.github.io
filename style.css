@@ -155,3 +155,13 @@ table tr td{
         transform: translate(0);
     }
 }
+
+.img-insta{
+  width: 300px;
+  margin: 0 auto;
+}
+
+.for-insta{
+  display: flex;
+  margin: 100px 0;
+}
